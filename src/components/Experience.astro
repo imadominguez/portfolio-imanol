@@ -4,31 +4,36 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    date: "February 2022",
-    title: "Application UI code in Tailwind CSS",
+    date: "Marzo 2022 - Actualmente...",
+    title: "Tutor de Desarrollo Web - Coderhouse",
     description:
-      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
-    link: "#",
+      "Como tutor de desarrollo web en Coderhouse, mi responsabilidad abarca guiar a los estudiantes en su proceso de aprendizaje, enseñando HTML, CSS, Bootstrap, Sass y Git. Facilito sesiones de clases, brindo retroalimentación personalizada y fomento la colaboración. Además, realizo correcciones de desafíos y trabajos finales. Manteniéndome actualizado, mi objetivo es preparar a los estudiantes para ser desarrolladores web competentes y éticos.",
   },
   {
-    date: "March 2022",
-    title: "Marketing UI design in Figma",
+    date: "Septiembre - Diciembre 2023",
+    title: "Active - FULLSTACK DEVELOPER",
     description:
-      "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+      "Web de gestión de clientes/productos y ecommerce para red de gimnasios.",
   },
   {
-    date: "April 2022",
-    title: "E-Commerce UI code in Tailwind CSS",
+    date: "Junio - Septiembre 2023",
+    title: "Aythen - Frontend Developer",
     description:
-      "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+      "Desarrollo de la aplicación web para la creación de espacios de trabajo dedicados a la creación de páginas web, junto con venta de cursos online o servicios freelance on demand. Lleve adelante el desarrollo frontend y sus distintas funcionalidades. Garantice una correcta migración de React a NextJs 13",
+  },
+  {
+    date: "Marzo - Mayo 2023",
+    title: "Urban - Frontend Developer",
+    description:
+      "Desarrollo de una aplicación para transporte público y privado de pasajeros, deliverys y carpool. Aporte activo en organización grupal y mejora de la comunicación en equipo. Logré llevar adelante el diseño UX-UI junto con el desarrollo frontend y sus funcionalidades.",
   },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 ml-3">
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10">
+      <li class="mb-10 ms-4">
         <ExperienceItem {...experience} />
       </li>
     ))

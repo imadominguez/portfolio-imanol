@@ -1,11 +1,15 @@
 ---
 import Badge from "@/components/Badge.astro";
+import Briefcase from "@/icons/Briefcase.astro";
+import Code from "@/icons/Code.astro";
 import Experience from "@/components/Experience.astro";
+import Footer from "@/components/Footer.astro";
 import Github from "@/icons/Github.astro";
 import Header from "@/components/Header.astro";
 import Layout from "@/layouts/Layout.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import Mail from "@/icons/Mail.astro";
+import Projects from "@/components/Projects.astro";
 import Section from "@/components/Section.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import WhatsApp from "@/icons/WhatsApp.astro";
@@ -18,11 +22,11 @@ import WhatsApp from "@/icons/WhatsApp.astro";
 >
   <Header />
 
-  <main class="">
-    <Section>
-      <img class="rounded-full size-20 mb-5" src="/ima.jpg" alt="ima foto" />
+  <main class="fade-in">
+    <Section class="pt-16 sm:pt-20 md:pt-28 lg:pt-44 pb-24">
+      <img class="rounded-full size-20 mb-5" src="/ima.webp" alt="ima foto" />
       <h1
-        class="text-white text-4xl font-bold flex justify-start items-center gap-x-4 pb-10"
+        class="text-white text-2xl lg:text-4xl font-bold flex justify-start items-center gap-x-4 pb-7 lg:pb-10"
       >
         Hey, soy Imanol
         <a
@@ -34,41 +38,56 @@ import WhatsApp from "@/icons/WhatsApp.astro";
           <Badge>Disponible</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-lg lg:text-2xl text-pretty max-w-[500px] md:max-w-none">
         <span>+1 año de experiencia.</span>
-        <span class="text-yellow-200/90">
-          Desarrollador Frontend y creador de contenido.</span
-        >
+        <span class="text-yellow-200/90"> Desarrollador Frontend.</span>
         <span class="text-sky-200/90">De Buenos Aires, Argentina.</span>
         <span class="opacity-80"
           >Especializado en crear aplicaciones en React JS.</span
         >
       </h2>
-      <nav class="mt-8 flex gap-x-4 gap-y-3 flex-wrap">
+      <nav class="mt-6 lg:mt-8 flex gap-2 md:gap-4 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/imanoldominguez/">
-          <LinkedIn class="size-6" />
+          <LinkedIn class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/imadominguez">
-          <Github class="size-6" />
+          <Github class="size-4 md:size-6" />
           Github
         </SocialPill>
-        <SocialPill href="mailto:imanol.desarrolloweb@gmail.com">
-          <Mail class="size-6" />
-          imanol.desarrolloweb@gmail.com
-        </SocialPill>
         <SocialPill href="https://api.whatsapp.com/send?phone=5492284633631">
-          <WhatsApp class="size-6" />
+          <WhatsApp class="size-4 md:size-6" />
           Contacto
+        </SocialPill>
+        <SocialPill href="mailto:imanol.desarrolloweb@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          imanol.desarrolloweb@gmail.com
         </SocialPill>
       </nav>
     </Section>
 
-    <Section id="Experience">
-      <h2>Experiencia</h2>
+    <Section id="experiencia" class="pb-24">
+      <h2
+        class="text-2xl md:text-3xl font-semibold mb-6 flex items-center gap-x-3"
+      >
+        <Briefcase class="size-6" />
+        Experiencia laboral
+      </h2>
       <Experience />
     </Section>
+
+    <Section id="proyectos">
+      <h2
+        class="text-2xl md:text-3xl font-semibold mb-6 flex items-center gap-x-3"
+      >
+        <Code class="size-6" />
+        Proyectos
+      </h2>
+      <Projects />
+    </Section>
   </main>
+
+  <Footer />
 </Layout>
 
 <style></style>

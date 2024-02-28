@@ -1,0 +1,32 @@
+---
+const PROJECTS = [
+  {
+    title: "Teslo Shop E-commerce App",
+    description:
+      "Teslo-Shop es una plataforma de comercio electrónico completa que aprovecha las capacidades avanzadas de Next.js 14. Además, integra herramientas modernas como Tailwind CSS para la estilización, Prisma para la gestión de la base de datos y Zustand para el manejo del estado de la aplicación.",
+    link: "https://teslo-shop-ima.vercel.app/",
+    github: "https://github.com/imadominguez/teslo-shop",
+    tags: ["React JS", "Next JS"],
+    image: "/teslo-shop-img.webp",
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, link, github, tags, image }) => (
+    <article class="pb-16">
+      <h1 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h1>
+      <p class="text-xl opacity-80 mb-3 text-pretty">{description}</p>
+      <ul class="flex items-center gap-2">
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img
+        src={image}
+        alt={`Imagen del proyecto ${title}`}
+        class="rounded-xl shadow-xl shadow-white/10"
+      />
+    </article>
+  ))
+}

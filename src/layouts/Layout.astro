@@ -34,11 +34,43 @@ const { title, description, keywords } = Astro.props;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
   body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    scroll-behavior: smooth;
+  }
+  @media (prefers-reduce-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
   }
 </style>
