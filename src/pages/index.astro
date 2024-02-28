@@ -13,6 +13,7 @@ import Projects from "@/components/Projects.astro";
 import Section from "@/components/Section.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import WhatsApp from "@/icons/WhatsApp.astro";
+import ArrowUp from "@/icons/ArrowUp.astro";
 ---
 
 <Layout
@@ -88,6 +89,36 @@ import WhatsApp from "@/icons/WhatsApp.astro";
   </main>
 
   <Footer />
+
+  <a
+    id="top-link"
+    href="#top"
+    class="hidden lg:hidden shadow-md shadow-white/35 fade-in bg-yellow-500 text-black px-2 py-2 rounded-full fixed bottom-16 right-10"
+  >
+    <ArrowUp class="size-4" />
+  </a>
 </Layout>
 
-<style></style>
+<style>
+  .show {
+    display: block;
+  }
+
+  .top-link {
+    display: none;
+    /* Agrega estilos adicionales según sea necesario */
+  }
+</style>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const topLink = document.getElementById("top-link");
+
+    if (window.scrollY > 0) {
+      topLink?.classList.remove("hidden");
+      topLink?.classList.add("flex items-center justify-center");
+    } else {
+      topLink?.classList.add("hidden");
+    }
+  });
+</script>
